@@ -9,7 +9,8 @@ class HistoryController extends Controller
 {
     private $machine;
 
-    public function __construct(MachineService $machine) {
+    public function __construct(MachineService $machine)
+    {
         $this->machine = $machine;
     }
 
@@ -19,7 +20,8 @@ class HistoryController extends Controller
      * @param Request $request
      * @return void
      */
-    public function getHistoryDataById(Request $request, $store_id, $machine_no, $date) {
+    public function getHistoryDataById(Request $request, $store_id, $machine_no, $date)
+    {
         $data = $this->machine->getHistoryDataById($store_id, $machine_no, $date);
 
         $ret = [
@@ -31,5 +33,4 @@ class HistoryController extends Controller
         return $ret;
         // echo '<pre>' . var_export($ret, true) . '</pre>';
     }
-
 }

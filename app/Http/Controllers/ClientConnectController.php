@@ -7,16 +7,17 @@ use Illuminate\Http\Request;
 use Validator;
 use App\Services\Client\ClientDataService;
 
-
 class ClientConnectController extends Controller
 {
     private $client;
 
-    public function __construct(ClientDataService $client) {
+    public function __construct(ClientDataService $client)
+    {
         $this->client = $client;
     }
 
-    public function setBaseGameInfo(Request $request) {
+    public function setBaseGameInfo(Request $request)
+    {
         $rules = [
             "id" => ['required', 'string'],
             "game" => ['required', 'integer', 'min:0'],
