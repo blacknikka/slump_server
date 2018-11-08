@@ -9,16 +9,6 @@ use Illuminate\Foundation\Testing\RefreshDatabase;
 class StoreTest extends TestCase
 {
     /**
-     * A basic test example.
-     *
-     * @return void
-     */
-    public function testExample()
-    {
-        $this->assertTrue(true);
-    }
-
-    /**
      * @test
      */
     public function apiTest店一覧取得()
